@@ -1,0 +1,88 @@
+
+Json Object to show in Edit Bot
+Input : botId/botName with/without user id
+Output : Following Json object
+
+{
+  botId:'sampleId',
+  botName:'Super Bot Alpha',
+  botDescription:'My Alpha bot',
+  integrations:[
+    {
+      intId:'uniqueID9081',
+      intName:'facebook',
+      enabled:false,
+      platformKey:'F0190909'
+    },
+    {
+      intId:'uniqueID9082',
+      intName:'twitter',
+      enabled:true,
+      platformKey:'F0190919'
+    }
+  ]
+}
+
+
+
+
+Json object to show in Dashboard
+Input : userId/other Unique id to find available bots for current user
+Output : Following Array of Json objects
+
+  [  
+   {  
+      botId:'sampleId',
+      botName:'Super Bot Alpha',
+      botDescription:'Super Bot Alpha Desc',
+      intList:[  
+         {  
+            intName:'facebook',
+            enabled:true
+         },
+         {  
+            intName:'twitter',
+            enabled:false
+         }
+      ]
+   },
+   {  
+      botId:'sampleId',
+      botName:'Super Bot Alpha',
+      botDescription:'Super Bot Alpha Desc',
+      intList:[  
+         {  
+            intName:'facebook',
+            enabled:true
+         },
+         {  
+            intName:'twitter',
+            enabled:false
+         }
+      ]
+   },
+   {  
+      botId:'sampleId',
+      botName:'Super Bot Alpha',
+      botDescription:'Super Bot Alpha Desc',
+      intList:[  
+         {  
+            intName:'facebook',
+            enabled:true
+         },
+         {  
+            intName:'twitter',
+            enabled:false
+         }
+      ]
+   }
+]
+
+Json For Createbot
+Input : {  
+   botName:"botname string",
+   botDescription:"bot description string",
+   userId:"userid for bot creation",
+   timestamp:1290
+}
+Output : boolean flag or any json object
